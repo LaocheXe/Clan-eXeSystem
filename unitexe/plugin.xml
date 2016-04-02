@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Plugin name="Unit eXeSystem" lan="" version="1.0" date="2016-02-20" compatibility="2.0" installRequired="true" >
+	<author name="LaocheXe" url="https://github.com/LaocheXe" />
+	<summary lan="">Unit system for e107</summary>
+	<description lan="">Based off a milsim unit back in 2015 this plugin was created for their requirements for a website.</description>
+	<keywords>
+		<word>clan</word>
+		<word>roster</word>
+	</keywords>
+	<category>manage</category>
+	<copyright>LaocheXe</copyright>
+	<adminLinks>
+		<link url="admin_config.php" description="" icon="" iconSmall="" icon128="" primary="true" >LAN_CONFIGURE</link>
+	</adminLinks>
+	<siteLinks>
+		<link url="{e_PLUGIN}unitexe/roster.php"  perm="everyone" >LAN_ROSTER_TITLE</link>
+	</siteLinks>
+	<mainPrefs>
+	</mainPrefs>
+	<mediaCategories>
+		<category type="image" sef="unit-awards" perm="everyone" image='{e_PLUGIN}unitexe/images/awards.jpg'>Unit Awards</category>
+		<category type="image" sef="unit-badges" perm="everyone" image='{e_PLUGIN}unitexe/images/badges.png'>Unit Badges</category>
+		<category type="image" sef="unit-medals" perm="everyone" image='{e_PLUGIN}unitexe/images/medals.png'>Unit Medals</category>
+		<category type="image" sef="unit-patches" perm="everyone" image='{e_PLUGIN}unitexe/images/patches.png'>Unit Patches</category>
+		<category type="image" sef="unit-pins" perm="everyone" image='{e_PLUGIN}unitexe/images/pins.png'>Unit Pins</category>
+		<category type="image" sef="unit-qualifications" perm="everyone" image='{e_PLUGIN}unitexe/images/qualifications.png'>Unit Qualifications</category>
+		<category type="image" sef="unit-ranks" perm="everyone" image='{e_PLUGIN}unitexe/images/ranks.png'>Unit Ranks</category>
+		<category type="image" sef="unit-ribbons" perm="everyone" image='{e_PLUGIN}unitexe/images/ribbons.png'>Unit Ribbons</category>
+		<category type="image" sef="unit-training" perm="everyone" image='{e_PLUGIN}unitexe/images/training.png'>Unit Training</category>
+	</mediaCategories>
+</e107Plugin>
