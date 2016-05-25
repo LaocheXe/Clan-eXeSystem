@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Plugin name="Roster" lan="" version="1.0" date="2016-05-16" compatibility="2.0" installRequired="true" >
+	<author name="LaocheXe" url="https://github.com/LaocheXe" />
+	<summary lan="">Roster eXeSystem is a roster style plugin</summary>
+	<description lan="">This plugin was created with the unitexe plugin which has awards, ranks, and other stuff.</description>
+	<keywords>
+		<word>gaming</word>
+		<word>units</word>
+		<word>roster</word>
+	</keywords>
+	<category>tools</category>
+	<copyright>LaocheXe</copyright>
+	<adminLinks>
+		<link url="admin_config.php" description="" icon="" iconSmall="" icon128="" primary="true" >LAN_CONFIGURE</link>
+	</adminLinks>
+	
+</e107Plugin>

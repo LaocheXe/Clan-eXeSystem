@@ -11,17 +11,33 @@
 if (!defined('e107_INIT')) { exit; }
 
 // v2.x Standard 
-class unitexe_user // plugin-folder + '_user'
+class rosterexe_user // plugin-folder + '_user'
 {		
 		
 	function profile($udata)  // display on user profile page.
 	{
 
 		$var = array(
-			0 => array('label' => "Label", 'text' => "Some text to display", 'url'=> e_PLUGIN_ABS."unitexe/unitexe.php")
+			0 => array('label' => "Label", 'text' => "Some text to display", 'url'=> e_PLUGIN_ABS."rosterexe/rosterexe.php")
 		);
 		
 		return $var;
 	}
+
+
+
+	function fields()
+	{
+
+		$fields = array(
+
+
+
+		);
+
+
+	}
+
+
 	
 }

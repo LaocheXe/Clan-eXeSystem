@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e107Plugin name="Unit eXeSystem" lan="" version="1.0" date="2016-02-20" compatibility="2.0" installRequired="true" >
+<e107Plugin name="Unit System" lan="LAN_UNIT_TITLE" version="1.0" date="2016-05-06" compatibility="2.0" installRequired="true" >
 	<author name="LaocheXe" url="https://github.com/LaocheXe" />
-	<summary lan="">Unit system for e107</summary>
-	<description lan="">Based off a milsim unit back in 2015 this plugin was created for their requirements for a website.</description>
+	<summary lan="">Unitexe is a plugin for e107 that has a roster for teams</summary>
+	<description lan="">Unit eXe System has the ability to a lot for a unit roster and more, this is a all-in-one roster, medals, awards, badges, pins, ribbons, ranks, training, every thing.</description>
 	<keywords>
-		<word>clan</word>
+		<word>gaming</word>
+		<word>units</word>
 		<word>roster</word>
 	</keywords>
 	<category>manage</category>
@@ -13,10 +14,19 @@
 		<link url="admin_config.php" description="" icon="" iconSmall="" icon128="" primary="true" >LAN_CONFIGURE</link>
 	</adminLinks>
 	<siteLinks>
-		<link url="{e_PLUGIN}unitexe/roster.php"  perm="everyone" >LAN_ROSTER_TITLE</link>
+		<link url="#"  perm="everyone" >LAN_UNIT_TITLE</link>
 	</siteLinks>
-	<mainPrefs>
-	</mainPrefs>
+	<pluginPrefs>
+		<pref name='Enable Awards'>0</pref>
+		<pref name='Enable Badges'>0</pref>
+		<pref name='Enable Medals'>0</pref>
+		<pref name='Enable Patches'>0</pref>
+		<pref name='Enable Pins'>0</pref>
+		<pref name='Enable Qualifications'>0</pref>
+		<pref name='Enable Ranks'>0</pref>
+		<pref name='Enable Ribbons'>0</pref>
+		<pref name='Enable Training'>0</pref>
+	</pluginPrefs>
 	<mediaCategories>
 		<category type="image" sef="unit-awards" perm="everyone" image='{e_PLUGIN}unitexe/images/awards.jpg'>Unit Awards</category>
 		<category type="image" sef="unit-badges" perm="everyone" image='{e_PLUGIN}unitexe/images/badges.png'>Unit Badges</category>
