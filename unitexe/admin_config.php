@@ -100,32 +100,33 @@ class unitexe_adminArea extends e_admin_dispatcher
 	
 	
 	protected $adminMenu = array(
-
+	
 		'other1/create'		=> array('caption'=> 'Create Awards', 'perm' => 'P'),
 		'other2/create'		=> array('caption'=> 'Create Badges', 'perm' => 'P'),
 		'other3/create'		=> array('caption'=> 'Create Medals', 'perm' => 'P'),
 		'other4/create'		=> array('caption'=> 'Create Patches', 'perm' => 'P'),
 		'other5/create'		=> array('caption'=> 'Create Pins', 'perm' => 'P'),
 		'other8/create'		=> array('caption'=> 'Create Ribbons', 'perm' => 'P'),
-		'opt1'              => array('caption'=> 'Test1', 'divider'=> true),
-		
+		'opt1'              => array('divider'=> true),
+		'opt2'              => array('header'=>"Manage", 'divider'=> true),
 		'other1/list'			=> array('caption'=> 'Manage Awards', 'perm' => 'P'),
 		'other2/list'			=> array('caption'=> 'Manage Badges', 'perm' => 'P'),
 		'other3/list'			=> array('caption'=> 'Manage Medals', 'perm' => 'P'),
 		'other4/list'			=> array('caption'=> 'Manage Patches', 'perm' => 'P'),
 		'other5/list'			=> array('caption'=> 'Manage Pins', 'perm' => 'P'),
 		'other8/list'			=> array('caption'=> 'Manage Ribbons', 'perm' => 'P'),
-		'opt2'              => array('caption'=> 'Test 2', 'divider'=> true),
-		
+		'opt3'              => array('divider'=> true),
+		'opt4'              => array('header'=>"Qualifications/Training", 'divider'=> true),
 		'other6/list'			=> array('caption'=> 'Manage Qualifications', 'perm' => 'P'),
 		'other6/create'		=> array('caption'=> 'Create Qualification', 'perm' => 'P'),
 		'other9/list'			=> array('caption'=> 'Manage Trainings', 'perm' => 'P'),
 		'other9/create'		=> array('caption'=> 'Create Training', 'perm' => 'P'),
-		'opt3'              => array('caption'=> 'Test 3', 'divider'=> true),
-		
+		'opt5'              => array('divider'=> true),
+		'opt6'              => array('header'=>"Ranks", 'divider'=> true),
 		'other7/list'			=> array('caption'=> 'Manage Ranks', 'perm' => 'P'),
 		'other7/create'		=> array('caption'=> 'Create Rank', 'perm' => 'P'),
-		'opt4'              => array('caption'=> 'Test 4', 'divider'=> true),
+		'opt7'              => array('divider'=> true),
+		'opt8'              => array('header'=>"Unit System Preferences", 'divider'=> true),
 		
 		'main/prefs' 		=> array('caption'=> LAN_PREFS, 'perm' => 'P'),	
 
