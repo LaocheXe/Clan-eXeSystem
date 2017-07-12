@@ -79,3 +79,25 @@ CREATE TABLE IF NOT EXISTS `training_exesystem` (
   KEY `train_parent` (`train_parent`),
   KEY `train_sub` (`train_sub`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1;
+
+CREATE TABLE IF NOT EXISTS `loa_exesystem` (
+  `loa_id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) NOT NULL,
+  `created_date` text NOT NULL,
+  `start_date` text NOT NULL,
+  `end_date` text NOT NULL,
+  `approvaed_date` text NOT NULL,
+  `reason` text NOT NULL,
+  `status_id` int(10) NOT NULL,
+  `returned` text NOT NULL,
+  `approved_user_id` int(10) NOT NULL,
+  `rocat_id` int(10) NOT NULL,
+  PRIMARY KEY  (`loa_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1;
+
+CREATE TABLE IF NOT EXISTS `status_exesystem` (
+  `status_id` int(10) NOT NULL AUTO_INCREMENT,
+  `status` text NOT NULL,
+  `hex_color` text NOT NULL,
+  PRIMARY KEY(`status_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1;

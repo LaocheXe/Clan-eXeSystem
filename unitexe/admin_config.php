@@ -23,7 +23,6 @@ class unitexe_adminArea extends e_admin_dispatcher
 			'ui' 			=> 'awards_exesystem_form_ui',
 			'uipath' 		=> null
 		),
-		
 
 		'other2'	=> array(
 			'controller' 	=> 'badges_exesystem_ui',
@@ -31,7 +30,6 @@ class unitexe_adminArea extends e_admin_dispatcher
 			'ui' 			=> 'badges_exesystem_form_ui',
 			'uipath' 		=> null
 		),
-		
 
 		'other3'	=> array(
 			'controller' 	=> 'medals_exesystem_ui',
@@ -39,7 +37,6 @@ class unitexe_adminArea extends e_admin_dispatcher
 			'ui' 			=> 'medals_exesystem_form_ui',
 			'uipath' 		=> null
 		),
-		
 
 		'other4'	=> array(
 			'controller' 	=> 'patches_exesystem_ui',
@@ -47,7 +44,6 @@ class unitexe_adminArea extends e_admin_dispatcher
 			'ui' 			=> 'patches_exesystem_form_ui',
 			'uipath' 		=> null
 		),
-		
 
 		'other5'	=> array(
 			'controller' 	=> 'pins_exesystem_ui',
@@ -55,7 +51,6 @@ class unitexe_adminArea extends e_admin_dispatcher
 			'ui' 			=> 'pins_exesystem_form_ui',
 			'uipath' 		=> null
 		),
-		
 
 		'other6'	=> array(
 			'controller' 	=> 'qualifications_exesystem_ui',
@@ -63,7 +58,6 @@ class unitexe_adminArea extends e_admin_dispatcher
 			'ui' 			=> 'qualifications_exesystem_form_ui',
 			'uipath' 		=> null
 		),
-		
 
 		'other7'	=> array(
 			'controller' 	=> 'ranks_exesystem_ui',
@@ -71,7 +65,6 @@ class unitexe_adminArea extends e_admin_dispatcher
 			'ui' 			=> 'ranks_exesystem_form_ui',
 			'uipath' 		=> null
 		),
-		
 
 		'other8'	=> array(
 			'controller' 	=> 'ribbons_exesystem_ui',
@@ -79,13 +72,26 @@ class unitexe_adminArea extends e_admin_dispatcher
 			'ui' 			=> 'ribbons_exesystem_form_ui',
 			'uipath' 		=> null
 		),
-		
 
 		'other9'	=> array(
 			'controller' 	=> 'training_exesystem_ui',
 			'path' 			=> null,
 			'ui' 			=> 'training_exesystem_form_ui',
 			'uipath' 		=> null
+		),
+		
+		'other10'	=> array(
+			'controller'	=> 'loa_exesystem_ui',
+			'path'			=> null,
+			'ui'			=> 'loa_exesystem_form_ui',
+			'uipath'		=> null
+		),
+		
+		'other11'	=> array(
+			'controller'	=> 'status_exesystem_ui',
+			'path'			=> null,
+			'ui'			=> 'status_exesystem_form_ui',
+			'uipath'		=> null
 		),
 		
 		'main'	=> array(
@@ -107,6 +113,7 @@ class unitexe_adminArea extends e_admin_dispatcher
 		'other4/create'		=> array('caption'=> 'Create Patches', 'perm' => 'P'),
 		'other5/create'		=> array('caption'=> 'Create Pins', 'perm' => 'P'),
 		'other8/create'		=> array('caption'=> 'Create Ribbons', 'perm' => 'P'),
+		'other11/create'	=> array('caption'=>'Create Status', 'perm' => 'P'),
 		'opt1'              => array('divider'=> true),
 		'opt2'              => array('header'=>"Manage", 'divider'=> true),
 		'other1/list'			=> array('caption'=> 'Manage Awards', 'perm' => 'P'),
@@ -115,6 +122,7 @@ class unitexe_adminArea extends e_admin_dispatcher
 		'other4/list'			=> array('caption'=> 'Manage Patches', 'perm' => 'P'),
 		'other5/list'			=> array('caption'=> 'Manage Pins', 'perm' => 'P'),
 		'other8/list'			=> array('caption'=> 'Manage Ribbons', 'perm' => 'P'),
+		'other11/list'	=> array('caption'=>'Manage Status', 'perm' => 'P'),
 		'opt3'              => array('divider'=> true),
 		'opt4'              => array('header'=>"Qualifications/Training", 'divider'=> true),
 		'other6/list'			=> array('caption'=> 'Manage Qualifications', 'perm' => 'P'),
@@ -126,7 +134,11 @@ class unitexe_adminArea extends e_admin_dispatcher
 		'other7/list'			=> array('caption'=> 'Manage Ranks', 'perm' => 'P'),
 		'other7/create'		=> array('caption'=> 'Create Rank', 'perm' => 'P'),
 		'opt7'              => array('divider'=> true),
-		'opt8'              => array('header'=>"Unit System Preferences", 'divider'=> true),
+		'opt8'				=> array('header'=>"Leave of Absences", 'divider'=> true),
+		'other10/list'		=> array('caption'=> 'Manage LOA', 'perm' => 'P'),
+		'other10/create'	=> array('caption'=> 'Create LOA', 'perm'=> 'P'),
+		'opt9'              => array('divider'=> true),
+		'opt10'              => array('header'=>"Unit System Preferences", 'divider'=> true),
 		
 		'main/prefs' 		=> array('caption'=> LAN_PREFS, 'perm' => 'P'),	
 
@@ -215,17 +227,6 @@ class awards_exesystem_ui extends e_admin_ui
 		{
 			// do something		
 		}		
-		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
-		}
-	*/
 			
 }
 				
@@ -308,18 +309,7 @@ class badges_exesystem_ui extends e_admin_ui
 		public function onUpdateError($new_data, $old_data, $id)
 		{
 			// do something		
-		}		
-		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
 		}
-	*/
 			
 }
 				
@@ -404,17 +394,6 @@ class medals_exesystem_ui extends e_admin_ui
 			// do something		
 		}		
 		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
-		}
-	*/
-			
 }
 				
 
@@ -496,18 +475,7 @@ class patches_exesystem_ui extends e_admin_ui
 		public function onUpdateError($new_data, $old_data, $id)
 		{
 			// do something		
-		}		
-		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
-		}
-	*/
+		}	
 			
 }
 				
@@ -591,17 +559,6 @@ class pins_exesystem_ui extends e_admin_ui
 		{
 			// do something		
 		}		
-		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
-		}
-	*/
 			
 }
 				
@@ -685,18 +642,7 @@ class qualifications_exesystem_ui extends e_admin_ui
 		{
 			// do something		
 		}		
-		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
-		}
-	*/
-			
+					
 }
 				
 
@@ -880,17 +826,6 @@ class ranks_exesystem_ui extends e_admin_ui
 			// do something		
 		}		
 		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
-		}
-	*/
-			
 }
 				
 
@@ -1048,24 +983,91 @@ class ribbons_exesystem_ui extends e_admin_ui
 		public function onUpdateError($new_data, $old_data, $id)
 		{
 			// do something		
-		}		
-		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
-		}
-	*/
-			
+		}			
 }
 				
 
 
 class ribbons_exesystem_form_ui extends e_admin_form_ui
+{
+
+}
+
+class status_exesystem_ui extends e_admin_ui
+{
+			
+		protected $pluginTitle		= 'Status System';
+		protected $pluginName		= 'unitexe';
+	//	protected $eventName		= 'unitexe-badges_exesystem'; // remove comment to enable event triggers in admin. 		
+		protected $table			= 'status_exesystem';
+		protected $pid				= 'status_id';
+		protected $perPage			= 10; 
+		protected $batchDelete		= true;
+	//	protected $batchCopy		= true;		
+	//	protected $sortField		= 'somefield_order';
+	//	protected $orderStep		= 10;
+	//	protected $tabs				= array('Tabl 1','Tab 2'); // Use 'tab'=>0  OR 'tab'=>1 in the $fields below to enable. 
+		
+	//	protected $listQry      	= "SELECT * FROM `#tableName` WHERE field != '' "; // Example Custom Query. LEFT JOINS allowed. Should be without any Order or Limit.
+	
+		protected $listOrder		= 'status_id DESC';
+	
+		protected $fields 		= array (  'checkboxes' =>   array ( 'title' => '', 'type' => null, 'data' => null, 'width' => '5%', 'thclass' => 'center', 'forced' => '1', 'class' => 'center', 'toggle' => 'e-multiselect',  ),
+		  'status_id' =>   array ( 'title' => LAN_ID, 'data' => 'int', 'width' => '5%', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'status' =>   array ( 'title' => 'Status', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'hex_color' =>   array ( 'title' => 'Hex Color (WIP)', 'type' => 'textarea', 'data' => 'str', 'width' => '40%', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'options' =>   array ( 'title' => LAN_OPTIONS, 'type' => null, 'data' => null, 'width' => '10%', 'thclass' => 'center last', 'class' => 'center last', 'forced' => '1',  ),
+		);		
+		
+		protected $fieldpref = array('status', 'hex_color');
+		
+	
+		public function init()
+		{
+			// Set drop-down values (if any). 
+	
+		}
+
+		
+		// ------- Customize Create --------
+		
+		public function beforeCreate($new_data,$old_data)
+		{
+			return $new_data;
+		}
+	
+		public function afterCreate($new_data, $old_data, $id)
+		{
+			// do something
+		}
+
+		public function onCreateError($new_data, $old_data)
+		{
+			// do something		
+		}		
+		
+		
+		// ------- Customize Update --------
+		
+		public function beforeUpdate($new_data, $old_data, $id)
+		{
+			return $new_data;
+		}
+
+		public function afterUpdate($new_data, $old_data, $id)
+		{
+			// do something	
+		}
+		
+		public function onUpdateError($new_data, $old_data, $id)
+		{
+			// do something		
+		}			
+}
+				
+
+
+class status_exesystem_form_ui extends e_admin_form_ui
 {
 
 }		
@@ -1147,23 +1149,105 @@ class training_exesystem_ui extends e_admin_ui
 		{
 			// do something		
 		}		
-		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
-		}
-	*/
-			
 }
 				
 
 
 class training_exesystem_form_ui extends e_admin_form_ui
+{
+
+}
+
+
+/***********************************
+TO DO TO DO TO DO TO DO TO DO TO DO
+	UPDATE ADMIN STUFF BELOW
+***********************************/
+class loa_exesystem_ui extends e_admin_ui
+{
+			
+		protected $pluginTitle		= 'LOA System';
+		protected $pluginName		= 'unitexe';
+	//	protected $eventName		= 'unitexe-training_exesystem'; // remove comment to enable event triggers in admin. 		
+		protected $table			= 'loa_exesystem';
+		protected $pid				= 'loa_id';
+		protected $perPage			= 10; 
+		protected $batchDelete		= true;
+	//	protected $batchCopy		= true;		
+	//	protected $sortField		= 'somefield_order';
+	//	protected $orderStep		= 10;
+	//	protected $tabs				= array('Tabl 1','Tab 2'); // Use 'tab'=>0  OR 'tab'=>1 in the $fields below to enable. 
+		
+	//	protected $listQry      	= "SELECT * FROM `#tableName` WHERE field != '' "; // Example Custom Query. LEFT JOINS allowed. Should be without any Order or Limit.
+	
+		protected $listOrder		= 'loa_id DESC';
+	
+		protected $fields 		= array (  'checkboxes' =>   array ( 'title' => '', 'type' => null, 'data' => null, 'width' => '5%', 'thclass' => 'center', 'forced' => '1', 'class' => 'center', 'toggle' => 'e-multiselect',  ),
+		  'loa_id' =>   array ( 'title' => LAN_ID, 'data' => 'int', 'width' => '5%', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+/* User Dropdown */		  'user_id' =>   array ( 'title' => 'User:', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'created_date' =>   array ( 'title' => 'Creation Date', 'type' => 'textarea', 'data' => 'str', 'width' => '40%', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'start_date' =>   array ( 'title' => 'Start Date', 'type' => 'dropdown', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'end_date' =>   array ( 'title' => 'End Date', 'type' => 'dropdown', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'approved_date' =>   array ( 'title' => 'Approved Date', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'reason' =>   array ( 'title' => 'Reason', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'status_id' =>   array ( 'title' => 'Status', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'returned' =>   array ( 'title' => 'Returned', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+/* User Dropdown */		  'approved_user_id' =>   array ( 'title' => 'Approved By:', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'rocat_id' =>   array ( 'title' => 'Posistion', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'options' =>   array ( 'title' => LAN_OPTIONS, 'type' => null, 'data' => null, 'width' => '10%', 'thclass' => 'center last', 'class' => 'center last', 'forced' => '1',  ),
+		);		
+		
+		protected $fieldpref = array('train_name', 'train_parent', 'train_sub', 'train_order');
+		
+	
+		public function init()
+		{
+			// Set drop-down values (if any). 
+			$this->fields['train_parent']['writeParms']['optArray'] = array('train_parent_0','train_parent_1', 'train_parent_2'); // Example Drop-down array. 
+			$this->fields['train_sub']['writeParms']['optArray'] = array('train_sub_0','train_sub_1', 'train_sub_2'); // Example Drop-down array. 
+	
+		}
+
+		
+		// ------- Customize Create --------
+		
+		public function beforeCreate($new_data,$old_data)
+		{
+			return $new_data;
+		}
+	
+		public function afterCreate($new_data, $old_data, $id)
+		{
+			// do something
+		}
+
+		public function onCreateError($new_data, $old_data)
+		{
+			// do something		
+		}		
+		
+		
+		// ------- Customize Update --------
+		
+		public function beforeUpdate($new_data, $old_data, $id)
+		{
+			return $new_data;
+		}
+
+		public function afterUpdate($new_data, $old_data, $id)
+		{
+			// do something	
+		}
+		
+		public function onUpdateError($new_data, $old_data, $id)
+		{
+			// do something		
+		}					
+}
+				
+
+
+class loa_exesystem_form_ui extends e_admin_form_ui
 {
 
 }
@@ -1201,6 +1285,8 @@ class pref_exesystem_ui extends e_admin_ui
 			'Enable Ranks'		=> array('title'=> 'Enable Ranks', 'tab'=>0, 'type'=>'boolean', 'data' => 'str', 'help'=>''),
 			'Enable Ribbons'		=> array('title'=> 'Enable Ribbons', 'tab'=>0, 'type'=>'boolean', 'data' => 'str', 'help'=>''),
 			'Enable Training'		=> array('title'=> 'Enable Training', 'tab'=>0, 'type'=>'boolean', 'data' => 'str', 'help'=>''),
+			'Enable LOA'			=> array('title'=> 'Enable LOA', 'tab'=>0,	'type'=>'boolean', 'data' =>'str', 'help'=>''),
+			'Enable Status'			=> array('title'=> 'Enable Status', 'tab'=>0, 'type'=>'boolean', 'data' => 'str', 'help'=>'')
 		);		
 	
 		public function init()
@@ -1244,17 +1330,6 @@ class pref_exesystem_ui extends e_admin_ui
 		{
 			// do something		
 		}		
-		
-			
-	/*	
-		// optional - a custom page.  
-		public function customPage()
-		{
-			$text = 'Hello World!';
-			return $text;
-			
-		}
-	*/
 			
 }
 				
