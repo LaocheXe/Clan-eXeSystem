@@ -1184,27 +1184,48 @@ class loa_exesystem_ui extends e_admin_ui
 	
 		protected $fields 		= array (  'checkboxes' =>   array ( 'title' => '', 'type' => null, 'data' => null, 'width' => '5%', 'thclass' => 'center', 'forced' => '1', 'class' => 'center', 'toggle' => 'e-multiselect',  ),
 		  'loa_id' =>   array ( 'title' => LAN_ID, 'data' => 'int', 'width' => '5%', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-/* User Dropdown */		  'user_id' =>   array ( 'title' => 'User:', 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'created_date' =>   array ( 'title' => 'Creation Date', 'type' => 'textarea', 'data' => 'str', 'width' => '40%', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'start_date' =>   array ( 'title' => 'Start Date', 'type' => 'dropdown', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'end_date' =>   array ( 'title' => 'End Date', 'type' => 'dropdown', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'approved_date' =>   array ( 'title' => 'Approved Date', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+     	  'user_id'  =>   array ( 'title' => 'User', 'type' => 'dropdown', 'data' => 'int', 'width' => '5%', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'created_date' =>   array ( 'title' => 'Creation Date', 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'start_date' =>   array ( 'title' => 'Start Date', 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'end_date' =>   array ( 'title' => 'End Date', 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'approved_date' =>   array ( 'title' => 'Approved Date', 'type' => 'datestamp', 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'reason' =>   array ( 'title' => 'Reason', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'status_id' =>   array ( 'title' => 'Status', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'returned' =>   array ( 'title' => 'Returned', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-/* User Dropdown */		  'approved_user_id' =>   array ( 'title' => 'Approved By:', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
-		  'rocat_id' =>   array ( 'title' => 'Posistion', 'type' => 'number', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'status_id' =>   array ( 'title' => 'Status', 'type' => 'dropdown', 'data' => 'int', 'width' => '5%', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'returned' =>   array ( 'title' => 'Returned', 'type' => 'text', 'data' => 'int', 'width' => 'auto', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'approved_user_id' =>   array ( 'title' => 'Approved By:', 'type' => 'dropdown', 'data' => 'int', 'width' => '5%', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
+		  'rocat_id' =>   array ( 'title' => 'Posistion', 'type' => 'dropdown', 'data' => 'int', 'width' => '5%', 'inline' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'left', 'thclass' => 'left',  ),
 		  'options' =>   array ( 'title' => LAN_OPTIONS, 'type' => null, 'data' => null, 'width' => '10%', 'thclass' => 'center last', 'class' => 'center last', 'forced' => '1',  ),
 		);		
 		
-		protected $fieldpref = array('train_name', 'train_parent', 'train_sub', 'train_order');
+		protected $fieldpref = array();
 		
 	
 		public function init()
 		{
 			// Set drop-down values (if any). 
-			$this->fields['train_parent']['writeParms']['optArray'] = array('train_parent_0','train_parent_1', 'train_parent_2'); // Example Drop-down array. 
-			$this->fields['train_sub']['writeParms']['optArray'] = array('train_sub_0','train_sub_1', 'train_sub_2'); // Example Drop-down array. 
+			$sql = e107::getDb();
+			$this->user_id[0] = 'Select User';
+			if($sql->select("user", "*")) { while ($row = $sql->fetch()) {
+				$this->user_id[$row['user_id']] = $row['user_name']; } 	} 
+        		$this->fields['user_id']['writeParms'] = $this->user_id;
+		
+			$sql2 = e107::getDb();
+			$this->approved_user_id[0] = 'Select User';
+			if($sql2->select("user", "*")) { while ($row2 = $sql2->fetch()) {
+				$this->approved_user_id[$row2['user_id']] = $row2['user_name']; } 	} 
+        		$this->fields['user_id']['writeParms'] = $this->approved_user_id;
+			
+			$sql3 = e107::getDB();
+			$this->rocat_id[0] = 'Select Section';
+			if($sql3->select("rostercat_exe", "*")) { while ($row3 = $sql3->fetch()) {
+				$this->rocat_id[$row3['rocat_id']] = $row3['rocat_name']; }  }
+				$this->fields['rocat_id']['writeParms'] = $this->rocat_id;
+			
+			$sql4 = e107::getDB();
+			$this->status_id[0] = 'Select Status';
+			if($sql3->select("status_exesystem", "*")) { while ($row4 = $sql4->fetch()) {
+				$this->status_id[$row4['status_id']] = $row4['status']; }  }
+				$this->fields['status_id']['writeParms'] = $this->status_id;	
 	
 		}
 

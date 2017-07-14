@@ -27,14 +27,13 @@ CREATE TABLE IF NOT EXISTS `roster_exe` (
   `qual_id` text,
   `ribbon_id` text,
   `train_id` text,
-  `enlistment_date` text,
-  `induction_date` text,
-  `promotion_date` text,
+  `enlistment_date` int(10) NOT NULL,
+  `induction_date` int(10) NOT NULL,
+  `promotion_date` int(10) NOT NULL,
   `recruiter_id` int(10) NOT NULL,
   `recruiting_medium` text,
-  `application_topic_id` int(10) NOT NULL,
-  `status` int(10) NOT NULL,
-  `position` text,
+  `application_id` int(10) NOT NULL,
+  `status_id` int(10) NOT NULL,
   `mos` text,
   `serial` text,
   `supervisor` int(10) NOT NULL,
@@ -44,22 +43,28 @@ CREATE TABLE IF NOT EXISTS `roster_exe` (
   PRIMARY KEY (`rost_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1;
 
+CREATE TABLE IF NOT EXISTS `mos_exe` (
+  `mos_id` int(10) NOT NULL auto_increment,
+  `mos` text,
+  `mos_description` text,
+  PRIMARY KEY(`mos_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1;
+
 CREATE TABLE IF NOT EXISTS `requests_exe` (
   `request_id` int(10) NOT NULL AUTO_INCREMENT,
   `user_id` int(10) NOT NULL,
-  `date` text NOT NULL,
+  `date` int(10) NOT NULL,
   `description` text,
-  `type` text,
-  `administrator_user_id` int(10) NOT NULL,
-  `status` text,
-  `relational_id` text,
+  `rtype_id` int(10) NOT NULL,
+  `status_id` int(10) NOT NULL,
+  `accepted_id` int(10) NULL,
   PRIMARY KEY(`request_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `service_records_exe` (
   `sr_id` int(10) NOT NULL auto_increment,
   `user_id int(11) NOT NULL,
-  `date` text,
+  `date` int(10) NOT NULL,
   `entry` text,
   `type` text,
   `award` text,
@@ -79,6 +84,13 @@ CREATE TABLE IF NOT EXISTS `promitions_exe` (
   `prom_rank` int(10) NOT NULL,
   `reason` text,
   `who_promo` int(10) NOT NULL,
-  `date` text,
+  `date` int(10) NOT NULL,
   PRIMARY KEY(`promo_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1;
+
+CREATE TABLE IF NOT EXISTS `retype_exe` (
+  `rtype_id` int(10) NOT NULL AUTO_INCREMENT,
+  `request` text NOT NULL,
+  `rtype_description` text,
+  PRIMARY KEY(`rtype_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1;

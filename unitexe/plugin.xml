@@ -2,7 +2,7 @@
 <e107Plugin name="Unit System" lan="LAN_UNIT_TITLE" version="1.0" date="2016-05-06" compatibility="2.0" installRequired="true" >
 	<author name="LaocheXe" url="https://github.com/LaocheXe" />
 	<summary lan="">Unitexe is a plugin for e107 that has a roster for teams</summary>
-	<description lan="">Unit eXe System has the ability to a lot for a unit roster and more, this is a all-in-one roster, medals, awards, badges, pins, ribbons, ranks, training, every thing.</description>
+	<description lan="">Unit eXe System has the ability to a lot for a unit roster and more, this is a all-in-one roster, medals, awards, badges, pins, ribbons, ranks, training, everything.</description>
 	<keywords>
 		<word>gaming</word>
 		<word>units</word>
@@ -26,6 +26,8 @@
 		<pref name='Enable Ranks'>0</pref>
 		<pref name='Enable Ribbons'>0</pref>
 		<pref name='Enable Training'>0</pref>
+		<pref name='Enable LOA'>0</pref>
+		<pref name='Enable Status'>0</pref>
 	</pluginPrefs>
 	<mediaCategories>
 		<category type="image" sef="unit-awards" perm="everyone" image='{e_PLUGIN}unitexe/images/awards.jpg'>Unit Awards</category>
